@@ -52,3 +52,14 @@
     width: 550px;
     height: 230px;
 }
+
+.tags {
+    margin-bottom: 20px;
+}
+
+.tag {
+    background-color: #EA8C1E;
+    padding: 4px 9px 4px 9px;
+    margin-right: 10px;
+    border-radius: 5px;
+}

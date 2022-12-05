@@ -6,8 +6,7 @@ import ekelemene_pic from '../../images/ekalemene.png'
 
 const CurrentCoursePage = () => {
     return (
-        // main useless div yet
-        <div className={styles.main}>
+
         
         <div className={styles.page}>
             <UserCard />
@@ -40,12 +39,24 @@ const CurrentCoursePage = () => {
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur recusandae consequatur libero iste sapiente, ipsum totam quo facilis possimus ex, perferendis placeat voluptas velit quis ea enim iusto voluptates a.
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam corrupti quo ea iusto. Sed dignissimos libero aut, dolor doloremque qui, dolores sapiente possimus consectetur sequi quod necessitatibus nemo. Perspiciatis, libero?
                             
-                        </span>
+                        </span>                        
+                    </div>
+
+                    <div className={styles.tags}>
+                        <span className={styles.tag}>Дизайн</span>
+                        <span className={styles.tag}>Создание сайта</span>
+                        <span className={styles.tag}>СММ</span>
+                        <span className={styles.tag}>Онлайн</span>
+                    </div>
+
+                    <div className={styles.enroll_block}>
+                        {/* Continue here */}
+                        Записаться на курс
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+
     );
 };
 
