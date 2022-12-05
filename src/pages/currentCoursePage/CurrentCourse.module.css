@@ -1,0 +1,54 @@
+.page {
+    display: flex;
+    padding-top: 60px;
+}
+
+.main {
+    display: flex;
+}
+
+.info {
+    font-family: Roboto;
+    color: white;
+    width: 100%;
+    margin: 0px 20px 0 20px;
+    background-color: #202020;
+}
+
+.frame {
+    padding: 20px;
+}
+
+.text_rating_of_course {
+    display: flex;
+    justify-content: right;
+}
+
+.title_info {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+
+    color: #828282;
+}
+
+.title{
+    margin: 5px 0 5px 0;
+}
+
+.text {
+    margin: 30px 0 30px 0;
+}
+
+.img_block {
+    padding: 20px 0 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.img {
+    width: 550px;
+    height: 230px;
+}

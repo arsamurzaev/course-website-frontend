@@ -1,0 +1,101 @@
+.background_pic {
+    width: 300px;
+    height: 170px;
+}
+.current_course {
+    font-family: "Roboto";
+    
+}
+.info {    
+    padding-bottom: 100%;
+}
+.pfp {
+    position: relative;
+    top: -60px;
+    left: 30%;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.user_card {
+    position: sticky;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    color: white;
+    background-color: #202020;
+}
+
+.info_text {
+    top: -60px;
+    position: relative;
+    text-align: center;
+}
+
+.h1{ 
+    font-size: 20px;
+}
+
+.h3 {
+    position: relative;
+    color: #DEDEDE;
+    top: -5px;
+    font-size: 15px;
+}
+
+.social_clubs {
+    display: flex;
+    width: 40%;
+    justify-content: space-around;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.short_info {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    margin-top: 30px;
+    width: 260px;
+    padding: 30px 0 30px 0;
+}
+
+.buttons {
+    margin: 30px 0 0 0;
+    width: 260px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.red_button {
+    background: #ED3024;
+    border-radius: 25px;
+    width: 120px;
+    height: 40px;
+    color: white;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    /* identical to box height */
+
+    text-align: center;
+    cursor: pointer;
+}
+.blue_button {
+    background: #3137C9;
+    border-radius: 25px;
+    width: 120px;
+    height: 40px;
+    color: white;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    /* identical to box height */
+
+    text-align: center;
+    cursor: pointer;
+}
