@@ -1,0 +1,21 @@
+.footer{
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: #2D2D2D;
+    color: white;
+    padding: 30px 0;
+
+
+    .link{
+        display: flex;
+        justify-content: space-between;
+        width: 150px;
+
+        a{
+            color: white;
+            text-decoration: none;
+        }
+    }
+}
