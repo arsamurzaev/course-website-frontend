@@ -1,0 +1,55 @@
+
+
+.section {
+    font-family: Roboto;
+}
+
+.input {
+    background-color: #3136c900;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #3F3F3F;
+    margin-bottom: 20px;
+}
+
+.send_button{
+    border: 0px solid;
+    background: #3137C9;
+    border-radius: 5px;
+    padding: 8px 12px 8px 12px;
+    color: white;
+}
+
+.comment { 
+    padding: 60px 0 0 0;
+}
+
+.comment_user_info_block {
+    display: flex;
+    align-items: center;
+}
+
+.comment_user_info {
+    margin-left: 15px;
+}
+
+.timestamb {
+    color: #757575;
+    font-size: 12px;
+}
+
+.name {
+    font-size: 12px;
+}
+
+.text {
+    margin: 15px 0 0 0;
+    font-size: 12px;
+}
+
+.img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
