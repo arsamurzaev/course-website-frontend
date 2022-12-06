@@ -1,54 +1,177 @@
 .main {
   max-width: 100%;
-  padding-top: 40px;
-  padding-bottom: 90px;
-  background-color: #1c1b1b;
-}
 
-.description {
-  background-color: #202020;
-  max-width: 90%;
-  margin: auto;
-  border-radius: 5px;
-  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.35);
-  display: flex;
-  justify-content: center;
+  background: #141414;
+  padding-bottom:200px;
 
-  ul {
-    width: 90%;
-    height: 160px;
-    color: white;
-    list-style-type: none;
-    padding-bottom: 30px;
-    li {
-      padding-top: 14px;
-      font-size: 16px;
+  .discripchen {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 100%;
+    }
+    .quote {
+      position: absolute;
+      text-align: center;
+      color: white;
+      font-size: 60px;
+      font-family: Raleway;
+      margin-bottom: 50px;
     }
   }
-}
-
-.allСourses {
-  margin: auto;
-  margin-top: 90px;
-  background-color: #202020;
-  max-width: 90%;
-  border-radius: 5px;
-  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.35);
-  padding-bottom: 30px;
-  font-size: 14px;
-
-  ul {
-    padding-top: 30px;
-    color: white;
-    list-style-type: none;
-    text-align: center;
+  .group {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+    padding-top: 40px;
   }
 
-  .certainCourses {
+  .numberCourses {
+    width: 90%;
+    margin: auto;
+    background: #202020;
+    height: 450px;
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.35);
+    border-radius: 17px;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     justify-content: space-around;
-    color: white;
-    margin-top: 70px;
+
+    .icons {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 80%;
+
+      div {
+        width: 250px;
+        height: 200px;
+        background: #343434;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-align: center;
+
+        p {
+          margin-top: 5px;
+        }
+      }
+    }
+
+    .h1 {
+      color: white;
+      font-size: 25px;
+      font-weight: 700;
+    }
+
+    .more {
+      background: #006f87;
+      border-radius: 10px;
+      color: white;
+      padding: 15px 70px;
+      border: none;
+      cursor: pointer;
+    }
+  }
+  .blockFeedback {
+    margin: auto;
+    margin-top: 100px;
+    background: #202020;
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.35);
+    border-radius: 15px;
+    width: 90%;
+    padding: 34px 40px 60px 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    p {
+      font-size: 25px;
+      font-weight: 700;
+      text-align: center;
+      width: 100%;
+      color: white;
+    }
+    .feedback {
+      position: relative;
+      background: #343434;
+      margin-top: 60px;
+      border-radius: 20px;
+      width: 30%;
+      height: 300px;
+      img {
+        position: absolute;
+        height: 130px;
+        top: -40px;
+      }
+    }
+  }
+
+  .blockQuestions {
+    margin: auto;
+    margin-top: 75px;
+    width: 70%;
+    
+    .h1 {
+      font-size: 30px;
+      color: white;
+      margin-left: 20px;
+      padding: 40px;
+    }
+
+    .questions {
+      height: 450px;
+      background: #202020;
+      box-shadow: 0px 10px 35px rgba(0, 0, 0, 0.25);
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+
+      button{
+        width: 150px;
+        background: #3137C9;
+        box-shadow: 0px 4px 15px -7px rgba(48, 55, 201, 0.3);
+        border-radius: 5px;
+        border: none;
+        color: white;
+        padding: 15px 40px;
+        margin-top: 30px;
+        cursor: pointer;
+        margin-left: 170px;
+      }
+
+     
+    }
+    .questionsInput {
+       width: 80%;
+      margin-top: 30px;
+      text-align: center;
+      margin: auto;
+     
+      input {
+        width: 80%;
+        font-size: 16px;
+        color: #fff;
+        margin-bottom: 30px;
+        border: none;
+        padding: 10px 0;
+        border-bottom: 2px solid #3F3F3F;
+        outline: none;
+        background: transparent;
+        margin-top: 40px;
+
+       
+      }
+
+     
+    }
   }
 }
