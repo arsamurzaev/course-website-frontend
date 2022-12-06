@@ -1,17 +1,21 @@
-
 import Header from "./Header";
-import Footer from "./Footer";
 import MainPage from "./Main/MainPage";
+import ProfilePage from "../pages/ProfilePages/ProfilePage";
+import { Route, Routes } from "react-router-dom";
+import CoursePage from "../pages/CoursePages/CoursePage";
 
 const App = () => {
   return (
     <>
       <Header />
-      <MainPage />
-      <Footer />
+      <Routes>
+        <Route path="/" element={<MainPage />} />
+        <Route path="/profile" element={<ProfilePage />} />
+        <Route path="/courses" element={<CoursePage />} />
+      </Routes>
     </>
   );
 };
 
-
 export default App;
+git 

@@ -44,9 +44,12 @@ body {
 .inp_info:hover {
     border-bottom: 1px solid #107EFF
 }
+.inp_info:focus {
+    border-bottom: 1px solid #107EFF
+}
 .avatar_card {
-    width: 120px;
-    display: ;
+    width: 100%;
+    text-align: end;
     color: #107EFF;
     cursor: pointer;
 }

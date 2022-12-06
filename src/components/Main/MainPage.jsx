@@ -7,6 +7,7 @@ import sport from "../../images/icon-sport.png";
 import creativity from "../../images/icon-creativity.png";
 import avatar from "../../images/avatar.png";
 import { Link } from "react-router-dom";
+import Footer from "../Footer";
 
 const MainPage = () => {
   return (
@@ -93,6 +94,7 @@ const MainPage = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };
