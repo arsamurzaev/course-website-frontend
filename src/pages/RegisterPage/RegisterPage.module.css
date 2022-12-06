@@ -1,0 +1,74 @@
+body {
+    background-color: #181818;
+}
+.main_card {
+    margin: 0 auto;
+    max-width: 500px;
+    height: 600px;
+    background-color: #202020;
+    -webkit-box-shadow: 2px 3px 19px 2px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 2px 3px 19px 2px rgba(0, 0, 0, 1);
+    box-shadow: 2px 3px 19px 2px rgba(0, 0, 0, 1);
+    margin-bottom: 100px;
+}
+.profile_card {
+    margin-top: 100px;
+    padding: 100px 0 10px 0;
+    text-align: center;
+}
+.profile_name {
+    font-weight: 400;
+    font-size: 31px;
+    color: #ffffff;
+}
+.inp_info_card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+.inp_info {
+    padding: 10px;
+    background-color: #202020;
+    border: none;
+    border-bottom: 1px solid #3F3F3F;
+    outline: none;
+}
+.inp_info:hover {
+    border-bottom: 1px solid #107EFF
+}
+.auth_card {
+    margin: auto;
+    width: 120px;
+    color: #107EFF;
+    cursor: pointer;
+}
+.profile_no {
+    color: #ffffff;
+}
+.auth_card:hover {
+    text-decoration: underline;
+}
+.auth_but_card {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.but_card {
+    margin: auto;
+    padding: 10px;
+    background-color: #3137C9;
+    width: 140px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 50px;
+    
+}
+.card_proff {
+    margin-top: 50px;
+    display: flex;
+    gap: 15px;
+}
