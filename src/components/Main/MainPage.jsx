@@ -55,7 +55,9 @@ const MainPage = () => {
           </div>
 
           <Link to="/">
-            <button className={styles.more}>Подробнее</button>
+            <button className={styles.more}>
+              <Link to="/courses">Подробнее</Link>{" "}
+            </button>
           </Link>
         </div>
 
