@@ -5,11 +5,13 @@
 }
 
 .input {
+    width: 100%;
     background-color: #3136c900;
     outline: none;
     border: none;
     border-bottom: 1px solid #3F3F3F;
-    margin-bottom: 20px;
+    margin: 20px 0 20px 0;
+    color: white ;
 }
 
 .send_button{
@@ -43,7 +45,7 @@
 }
 
 .text {
-    margin: 15px 0 0 0;
+    margin: 15px 0 15px 0;
     font-size: 12px;
 }
 
