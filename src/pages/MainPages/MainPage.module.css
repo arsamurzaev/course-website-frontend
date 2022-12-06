@@ -1,0 +1,63 @@
+body {
+    background-color: #181818;
+}
+.main_card {
+    margin: 0 auto;
+    max-width: 500px;
+    height: 600px;
+    background-color: #202020;
+    -webkit-box-shadow: 2px 3px 19px 2px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 2px 3px 19px 2px rgba(0, 0, 0, 1);
+    box-shadow: 2px 3px 19px 2px rgba(0, 0, 0, 1);
+}
+.profile_card {
+    margin-top: 100px;
+    text-align: center;
+}
+.img_card {
+    margin-top: 30px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid blue;
+}
+.profile_name {
+    font-weight: 400;
+    font-size: 31px;
+    color: #ffffff;
+}
+.inp_info_card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.inp_info {
+    padding: 10px;
+    background-color: #202020;
+    border: none;
+    border-bottom: 1px solid #3F3F3F;
+    outline: none;
+}
+.inp_info:hover {
+    border-bottom: 1px solid #107EFF
+}
+.avatar_card {
+    width: 120px;
+    display: ;
+    color: #107EFF;
+    cursor: pointer;
+}
+.avatar_card:hover {
+    text-decoration: underline;
+}
+.but_card {
+    padding: 10px;
+    background-color: #3137C9;
+    width: 140px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 50px;
+}

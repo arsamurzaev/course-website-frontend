@@ -1,7 +1,10 @@
+import CoursePage from "../pages/CoursePages/CoursePage";
+import MainPage from "../pages/MainPages/MainPage";
+
 const App = () => {
     return ( 
-        '1'
-     );
+        
+    );
 }
 
 export default App;
