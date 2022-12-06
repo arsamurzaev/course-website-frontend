@@ -4,6 +4,9 @@ import ProfilePage from "../pages/ProfilePages/ProfilePage";
 import { Route, Routes } from "react-router-dom";
 import CoursePage from "../pages/CoursePages/CoursePage";
 
+import CurrentCoursePage from "../pages/currentCoursePage/CurrentCoursePage";
+
+
 const App = () => {
   return (
     <>
