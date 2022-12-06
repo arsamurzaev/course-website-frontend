@@ -73,6 +73,7 @@
 }
 
 .red_button {
+    border: 0px solid;
     background: #ED3024;
     border-radius: 25px;
     width: 120px;
@@ -82,11 +83,11 @@
     font-size: 12px;
     line-height: 14px;
     /* identical to box height */
-
     text-align: center;
     cursor: pointer;
 }
 .blue_button {
+    border: 0px solid;
     background: #3137C9;
     border-radius: 25px;
     width: 120px;

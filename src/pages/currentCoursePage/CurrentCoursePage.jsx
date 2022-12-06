@@ -1,8 +1,9 @@
 import React from 'react';
-import UserCard from '../userCard/UserCard'
-import styles from './CurrentCourse.module.css'
+import UserCard from '../../components/userCard/UserCard';
+import styles from './CurrentCourse.module.css';
 // images
 import ekelemene_pic from '../../images/ekalemene.png'
+import Comments from '../../components/CommentSection/Comments';
 
 const CurrentCoursePage = () => {
     return (
@@ -51,8 +52,11 @@ const CurrentCoursePage = () => {
 
                     <div className={styles.enroll_block}>
                         {/* Continue here */}
-                        Записаться на курс
+                        <span className={styles.enroll_button}>Записаться на курс</span>
                     </div>
+
+                    <Comments />
+                    
                 </div>
             </div>
         </div>

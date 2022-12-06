@@ -16,7 +16,8 @@
 }
 
 .frame {
-    padding: 20px;
+    padding: 50px;
+    
 }
 
 .text_rating_of_course {
@@ -62,4 +63,16 @@
     padding: 4px 9px 4px 9px;
     margin-right: 10px;
     border-radius: 5px;
+}
+
+.enroll_block {
+    display: flex;
+    justify-content: right; 
+}
+
+.enroll_button {
+    padding: 8px 12px 8px 12px;
+    background: #3137C9;
+    border-radius: 5px;
+    cursor: pointer;
 }
