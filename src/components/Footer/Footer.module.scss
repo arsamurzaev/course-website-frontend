@@ -1,0 +1,37 @@
+.footer{
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    background: #2D2D2D;
+    color: white;
+    padding: 30px 0;
+
+
+    .link{
+        display: flex;
+        justify-content: space-between;
+        width: 150px;
+        margin-top: 20px;
+
+        
+    }
+    .text{
+        margin-top: 20px;
+        p{
+            text-align: center;
+            margin-top: 5px;
+            color: #B3B3B3;
+            
+        }
+    }
+}
+.end{
+    width: 100%;
+    background: #252525;
+    color: #B3B3B3;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 13px;
+}

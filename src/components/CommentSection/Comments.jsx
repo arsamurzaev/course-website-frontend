@@ -26,6 +26,63 @@ const Comments = () => {
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque ut odit adipisci? Voluptas odit cumque ab, ipsa expedita aliquam magnam laborum maxime, sint libero quasi obcaecati blanditiis iste ipsum? Ipsum?
                 </div>
             </div>
+
+            <div className={styles.comment}>
+                <div className={styles.comment_user_info_block}>
+                    <img className={styles.img} src={anonimous_pfp} alt="" />
+                    <div className={styles.comment_user_info}>
+                        <div className={styles.name}>Ёшкин Кот</div>
+                        <div className={styles.timestamb}>1 неделю назад</div>
+                    </div>
+                </div>
+                <div className={styles.text}>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque ut odit adipisci? Voluptas odit cumque ab, ipsa expedita aliquam magnam laborum maxime, sint libero quasi obcaecati blanditiis iste ipsum? Ipsum?
+                </div>
+            </div>
+
+
+            <div className={styles.comment}>
+                <div className={styles.comment_user_info_block}>
+                    <img className={styles.img} src={anonimous_pfp} alt="" />
+                    <div className={styles.comment_user_info}>
+                        <div className={styles.name}>Ёшкин Кот</div>
+                        <div className={styles.timestamb}>1 неделю назад</div>
+                    </div>
+                </div>
+                <div className={styles.text}>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque ut odit adipisci? Voluptas odit cumque ab, ipsa expedita aliquam magnam laborum maxime, sint libero quasi obcaecati blanditiis iste ipsum? Ipsum?
+                </div>
+            </div>
+
+
+            <div className={styles.comment}>
+                <div className={styles.comment_user_info_block}>
+                    <img className={styles.img} src={anonimous_pfp} alt="" />
+                    <div className={styles.comment_user_info}>
+                        <div className={styles.name}>Ёшкин Кот</div>
+                        <div className={styles.timestamb}>1 неделю назад</div>
+                    </div>
+                </div>
+                <div className={styles.text}>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque ut odit adipisci? Voluptas odit cumque ab, ipsa expedita aliquam magnam laborum maxime, sint libero quasi obcaecati blanditiis iste ipsum? Ipsum?
+                </div>
+            </div>
+
+
+
+            <div className={styles.comment}>
+                <div className={styles.comment_user_info_block}>
+                    <img className={styles.img} src={anonimous_pfp} alt="" />
+                    <div className={styles.comment_user_info}>
+                        <div className={styles.name}>Ёшкин Кот</div>
+                        <div className={styles.timestamb}>1 неделю назад</div>
+                    </div>
+                </div>
+                <div className={styles.text}>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque ut odit adipisci? Voluptas odit cumque ab, ipsa expedita aliquam magnam laborum maxime, sint libero quasi obcaecati blanditiis iste ipsum? Ipsum?
+                </div>
+            </div>
+            
         </div>
     );
 };

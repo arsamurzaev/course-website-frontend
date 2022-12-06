@@ -1,10 +1,20 @@
+import Header from "./Header";
+import Footer from "./Footer";
+import MainPage from "./Main/MainPage";
+
 import CurrentCoursePage from "../pages/currentCoursePage/CurrentCoursePage";
 
 
 const App = () => {
-    return ( 
-        <CurrentCoursePage />
-     );
-}
+  return (
+    <>
+      {/* <Header />
+      <MainPage />
+      <Footer /> */}
+
+      <CurrentCoursePage />
+    </>
+  );
+};
 
 export default App;

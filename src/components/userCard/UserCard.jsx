@@ -8,7 +8,7 @@ import instagram_logo from '../../images/instagram_logo.png'
 const UserCard = () => {
     return (
         // display flex
-        
+    <div>    
         <div className={styles.current_course}>
             <div className={styles.user_card}>
                 {/* w:300, h:170 */}
@@ -51,8 +51,10 @@ const UserCard = () => {
 
                 </div>
             </div>
-            <div className="info">t</div>
+            
         </div>
+        <div className={styles.background_down}></div>
+    </div>
     );
 };
 

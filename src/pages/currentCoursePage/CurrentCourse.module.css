@@ -8,6 +8,7 @@
 }
 
 .info {
+    border-radius: 10px;
     font-family: Roboto;
     color: white;
     width: 100%;
