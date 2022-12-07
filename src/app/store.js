@@ -1,5 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
-
-const store = configureStore({});
+import application from "../features/application/applicationSlice";
+const store = configureStore({
+  reducer: {
+    application,
+  },
+});
 
 export default store;
