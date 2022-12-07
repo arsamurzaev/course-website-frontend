@@ -7,6 +7,7 @@ import sport from "../../images/icon-sport.png";
 import creativity from "../../images/icon-creativity.png";
 import avatar from "../../images/avatar.png";
 import { Link } from "react-router-dom";
+import Footer from "../Footer";
 
 const MainPage = () => {
   return (
@@ -54,7 +55,9 @@ const MainPage = () => {
           </div>
 
           <Link to="/">
-            <button className={styles.more}>Подробнее</button>
+            <button className={styles.more}>
+              <Link to="/courses">Подробнее</Link>{" "}
+            </button>
           </Link>
         </div>
 
@@ -93,6 +96,7 @@ const MainPage = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };

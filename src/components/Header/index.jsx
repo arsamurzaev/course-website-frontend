@@ -13,15 +13,15 @@ const Header = () => {
         <Link to="/">
           <button>главная</button>
         </Link>
-        <Link to="">
+        <Link to="/courses">
           <button>курсы</button>
         </Link>
-        <Link to="">
+        <Link to="#">
           <button>преподаватели</button>
         </Link>
       </div>
       <div>
-        <Link>
+        <Link to="/profile">
           <button>мой профиль</button>
         </Link>
       </div>
