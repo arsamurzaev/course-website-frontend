@@ -7,6 +7,7 @@ import CurrentCoursePage from "../pages/currentCoursePage/CurrentCoursePage";
 import AuthPage from "../pages/AuthPage/AuthPage";
 import RegisterPage from "../pages/RegisterPage/RegisterPage";
 
+
 const App = () => {
   return (
     <>
