@@ -54,6 +54,7 @@ body {
     text-decoration: underline;
 }
 .but_card {
+    margin: auto;
     padding: 10px;
     background-color: #3137C9;
     width: 140px;
