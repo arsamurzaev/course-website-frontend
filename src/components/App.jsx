@@ -11,6 +11,7 @@ import RegisterPage from "../pages/RegisterPage/RegisterPage";
 const App = () => {
   return (
     <>
+    {/* Header */}
       <Header />
       <Routes>
         <Route path="/auth" element={<AuthPage />} />
