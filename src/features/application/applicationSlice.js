@@ -19,6 +19,8 @@ export const authSignUp = createAsyncThunk(
 
       const json = await res.json();
 
+      console.log(nickname);
+
       if (json.error) {
         return thunkAPI.rejectWithValue(json.error);
       }
