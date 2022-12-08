@@ -24,6 +24,17 @@ function CoursePage() {
             placeholder="введите название.."
           />
         </div>
+
+        <li className={styles.li}>Выбрать курс
+        <div className={styles.dropdown}>
+          <a className={styles.drop_link} href='*'>Link1</a>
+          <a className={styles.drop_link} href='*'>Link2</a>
+          <a className={styles.drop_link} href='*'>Link3</a>
+          <a className={styles.drop_link} href='*'>Link4</a>
+          <a className={styles.drop_link} href='*'>Link5</a>
+        </div>
+        </li>
+
         <div className={styles.price_teg}>
           <div className={styles.price}>Цена</div>
           <hr className={styles.siz} />
