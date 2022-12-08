@@ -17,13 +17,13 @@ const Footer = () => {
           <p>(359) 0 123 456 789 - info@yourmail.com</p>
         </div>
         <div className={styles.link}>
-          <a href="/">
+          <a className={styles.a} href="/">
             <img src={facebook} alt="" />
           </a>
-          <a href="/">
+          <a className={styles.a} href="/">
             <img src={twitter} alt="" />
           </a>
-          <a href="/">
+          <a className={styles.a} href="/">
             <img src={pinterest} alt="" />
           </a>
         </div>

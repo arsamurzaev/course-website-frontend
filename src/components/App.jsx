@@ -9,6 +9,7 @@ import RegisterPage from "../pages/RegisterPage/RegisterPage";
 import { useSelector } from "react-redux";
 import SnowBack from "./Background/Snow";
 import PreloaderPage from "../preloader/PreloaderPage";
+import Footer from "./Footer";
 
 const App = () => {
   const token = useSelector((state) => state.application.token);
