@@ -9,20 +9,14 @@ body {
     -webkit-box-shadow: 2px 3px 19px 2px rgba(0, 0, 0, 1);
     -moz-box-shadow: 2px 3px 19px 2px rgba(0, 0, 0, 1);
     box-shadow: 2px 3px 19px 2px rgba(0, 0, 0, 1);
+    margin-bottom: 100px;
 }
 .profile_card {
     margin-top: 100px;
+    padding: 100px 0 10px 0;
     text-align: center;
 }
-.img_card {
-    margin-top: 30px;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 2px solid blue;
-}
 .profile_name {
-    margin-top: 15px;
     font-weight: 400;
     font-size: 31px;
     color: #ffffff;
@@ -33,7 +27,7 @@ body {
     gap: 10px;
     width: 400px;
     margin: 0 auto;
-    margin-top: 20px;
+    margin-top: 50px;
 }
 .inp_info {
     padding: 10px;
@@ -45,17 +39,23 @@ body {
 .inp_info:hover {
     border-bottom: 1px solid #107EFF
 }
-.inp_info:focus {
-    border-bottom: 1px solid #107EFF
-}
-.avatar_card {
-    width: 100%;
-    text-align: end;
+.auth_card {
+    margin: auto;
+    width: 120px;
     color: #107EFF;
     cursor: pointer;
 }
-.avatar_card:hover {
+.profile_no {
+    color: #ffffff;
+}
+.auth_card:hover {
     text-decoration: underline;
+}
+.auth_but_card {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 .but_card {
     margin: auto;
@@ -64,12 +64,12 @@ body {
     width: 140px;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 30px;
+    margin-top: 50px;
     overflow: hidden;
     transition: .5s;
     letter-spacing: 4px;
-    /* border: 1px solid #8f7cec;  */
-}
+    border: 0px solid #8f7cec; 
+    }
 .but_card:hover {
     background: #8f7cec;
     color: #fff;
@@ -77,30 +77,35 @@ body {
     box-shadow: 0 0 5px #8f7cec, 0 0 25px #8f7cec,
     0 0 50px #8f7cec, 0 0 100px #8f7cec;
 }
-.but_cardx {
-    margin:  auto;
-    padding: 10px;
-    background-color: #3137C9;
-    width: 140px;
-    border-radius: 5px;
-    cursor: pointer;
-    overflow: hidden;
-    transition: .5s;
-    letter-spacing: 4px;
+.card_proff {
+    margin-top: 50px;
+    display: flex;
+    gap: 14px;
 }
-.but_cardx:hover {
-    background: #8f7cec;
+.waviy {
+    margin-top: 25px;
+    font-size: 40px;
     color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 5px #8f7cec, 0 0 25px #8f7cec,
-    0 0 50px #8f7cec, 0 0 100px #8f7cec;
+    position: relative;
+    -webkit-box-reflect: below -30px linear-gradient(transparent, rgba(0,0,0,.2));
+}
+.waviy span {
+    position: relative;
+    display: inline-block;
+    font-size: 40px;
+    color: #fff;
+    animation: waviy 1.5s ;
+    animation-delay: calc(.1s * var(--i))
+    
+}
+@keyframes waviy {
+    0%,40%,100% {
+    transform: translateY(0)
+    
 }
 
-.icon {
-    width: 30px;
-    position: absolute;
-    cursor: pointer;
-    border: 2px solid #3137C9;
-    border-radius: 30px;
-    margin-top: 10px;
+    
+20% {
+    transform: translateY(-20px)
+}
 }

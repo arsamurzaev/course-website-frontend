@@ -57,11 +57,11 @@ body {
     flex-direction: column;
     gap: 5px;
 }
-.but_card {
+.but_cards {
     margin: auto;
     padding: 10px;
     background-color: #3137C9;
-    width: 140px;
+    width: 200px;
     border-radius: 5px;
     cursor: pointer;
     margin-top: 50px;
@@ -70,7 +70,7 @@ body {
     letter-spacing: 4px;
     border: 0px solid #8f7cec; 
 }
-.but_card:hover {
+.but_cards:hover {
     background: #8f7cec;
     color: #fff;
     border-radius: 5px;

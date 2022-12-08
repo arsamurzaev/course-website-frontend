@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { authSignUp } from "../../features/application/applicationSlice";
-import styles from "./RegisterPage.module.css";
+import styles from "./RegisterPage.module.scss";
 
 const RegisterPage = () => {
   const dispatch = useDispatch();
@@ -31,7 +31,21 @@ const RegisterPage = () => {
   return (
     <form className={styles.main_card} onSubmit={handleSignUp}>
       <div className={styles.profile_card}>
-        <div className={styles.profile_name}>Регистрация</div>
+        {/* <div className={styles.profile_name}>Регистрация</div> */}
+        <div className={styles.waviy}>
+            <span style={{'-i': 1}}>Р</span>
+            <span style={{'--i':2}}>е</span>
+            <span style={{'--i':3}}>г</span>
+            <span style={{'--i':4}}>и</span>
+            <span style={{'--i':5}}>с</span>
+            <span style={{'--i':6}}>т</span>
+            <span style={{'--i':7}}>р</span>
+            <span style={{'--i':8}}>а</span>
+            <span style={{'--i':9}}>ц</span>
+            <span style={{'--i':10}}>и</span>
+            <span style={{'--i':10}}>я</span>
+            <span style={{'--i':10}}>.</span>
+          </div>
       </div>
 
       <div className={styles.inp_info_card}>
@@ -58,7 +72,7 @@ const RegisterPage = () => {
         />
 
         <div className={styles.auth_but_card}>
-          <button className={styles.but_card} type="submit">
+          <button className={styles.but_cards} type="submit">
             Зарегистрироваться
           </button>
           <div className={styles.card_proff}>
