@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styles from './TeacherPage.module.css'
 import Teacher from './Teacher';
+import { useDispatch, useSelector } from 'react-redux';
+import {fetchUsers} from '../../features/users/usersSlice'
 
 const TeachersPage = () => {
+    const dispatch = useDispatch()
+    useEffect(() => {
+        dispatch(fetchUsers())
+    }, [dispatch])
+    const users = useSelector(state => state.users.user);
+
     return (
         <div className={styles.page}>
             <div className={styles.input_block}>
@@ -12,9 +20,19 @@ const TeachersPage = () => {
                 </div>
             </div>
 
-
-            <Teacher />
-            
+            {
+                users.map(user => {
+                    if (user.role === 'teacher') {
+                        return (
+                            <Teacher
+                                nickname={user.nickname}
+                                description={user.description}
+                                avatar={user.avatar}
+                            />
+                        )
+                    }
+                })
+            }
 
 
         </div>

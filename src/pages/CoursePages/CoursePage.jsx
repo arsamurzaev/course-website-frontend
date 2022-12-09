@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchCourses } from "../../features/courses/coursesSlice";
 import PreloaderPage from "../../preloader/PreloaderPage";
@@ -6,16 +6,19 @@ import CourseCard from "./CourseCard";
 import styles from "./CoursePage.module.css";
 
 function CoursePage({ description }) {
-  const [priceOutput, setPriceOutput] = useState();
   const dispatch = useDispatch();
   const courses = useSelector((state) => state.courses);
-  const loading = useSelector((state) => state.courses.loading)
-  
+  const loading = useSelector((state) => state.courses.loading);
+
+  useEffect(() => {
+    dispatch(fetchCourses());
+  }, [dispatch]);
+
   useEffect(() => {
     window.scroll(0, 0);
   });
 
-  if (loading) return <PreloaderPage/>
+  if (loading) return <PreloaderPage />;
 
   return (
     <div className={styles.course}>
@@ -55,11 +58,13 @@ function CoursePage({ description }) {
           <hr className={styles.siz} />
           от
           <input
+            // value={search} 
             className={styles.inp_price}
             type="number"
             step="0.01"
             min="0"
             placeholder="0,00"
+          // onChange={(e) => setSearch(e.target.value)} 
           />
           до
           <input
@@ -72,13 +77,13 @@ function CoursePage({ description }) {
         </div>
       </div>
       {courses.courses.map((course) => {
-        console.log(course);
         return (
           <CourseCard
             description={course.description}
             name={course.name}
             online={course.online}
             price={course.price}
+            tags={course.tags}
           />
         );
       })}
