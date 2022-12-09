@@ -9,7 +9,7 @@ const initialState = {
 
 export const fetchCourses = createAsyncThunk('courses/fetch', async (data, thunkAPI) => {
     try {
-        const res = await fetch('http://localhost:4000/courses');
+        const res = await fetch('/courses');
         const courses = await res.json();
 
         return thunkAPI.fulfillWithValue(courses);

@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 const Header = () => {
+  const user = useSelector((state) => state.users.user);
+
   const token = useSelector((state) => state.application.token);
 
   return (
@@ -22,6 +24,11 @@ const Header = () => {
         <Link to="#">
           <button>преподаватели</button>
         </Link>
+        {user.role === "teacher" && (
+          <Link to="/my-courses">
+            <button>Мои курсы</button>
+          </Link>
+        )}
       </div>
       <div>
         <Link to={!token ? "/auth" : "/profile"}>
