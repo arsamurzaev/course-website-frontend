@@ -1,94 +1,82 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchCourses } from "../../features/courses/coursesSlice";
+import CourseCard from "./CourseCard";
 import styles from "./CoursePage.module.css";
-import smmPh from "../../image/sms.png";
-import { Link } from "react-router-dom";
 
-function CoursePage() {
+function CoursePage({ description }) {
+  const [priceOutput, setPriceOutput] = useState();
+  const dispatch = useDispatch()
+  const courses = useSelector(state => state.courses)
+
+
+  
+  useEffect(() => {
+    dispatch(fetchCourses())
+  }, [dispatch])
+
 
   useEffect(() => {
     window.scroll(0, 0)
   })
   return (
-    <div className={styles.course}>
+    <div className={styles.course}> 
+
+{/* 
+  Ali commented
+
       <div className={styles.main_categ}>Выберите категорию курсов</div>
 
-      <div className={styles.categories}>
-        <button className={styles.circle}>IT</button>
-        <button className={styles.circle}>Спорт</button>
-        <button className={styles.circle}>Творчество</button>
-      </div>
+  <div className={styles.categories}>
+  <button className={styles.circle}>IT</button>
+  <button className={styles.circle}>Спорт</button>
+  <button className={styles.circle}>Творчество</button>
+</div> */}
 
-      <div className={styles.inp_price_categ}>
-        <div className={styles.search_teg}>
-          <div className={styles.name_teg}>Поиск по тегам</div>
-          <hr className={styles.siz} />
-          <input
-            className={styles.inp_teg}
-            type="text"
-            placeholder="введите название.."
-          />
-        </div>
-
-        <li className={styles.li}>Выбрать курс
-        <div className={styles.dropdown}>
-          <a className={styles.drop_link} href='*'>Link1</a>
-          <a className={styles.drop_link} href='*'>Link2</a>
-          <a className={styles.drop_link} href='*'>Link3</a>
-          <a className={styles.drop_link} href='*'>Link4</a>
-          <a className={styles.drop_link} href='*'>Link5</a>
-        </div>
-        </li>
-
-        <div className={styles.price_teg}>
-          <div className={styles.price}>Цена</div>
-          <hr className={styles.siz} />
-          от
-          <input
-            className={styles.inp_price}
-            type="number"
-            step="0.01"
-            min="0"
-            placeholder="0,00"
-          />
-          до
-          <input
-            className={styles.inp_price}
-            type="number"
-            step="0.01"
-            min="0"
-            placeholder="0,00"
-          />
-        </div>
-      </div>
-
-      <div className={styles.card_smm_cours}>
-        <div className={styles.card_img_smm}>
-          <img className={styles.img_smm} src={smmPh} alt="" />
-        </div>
-        <div className={styles.list_smm}>
-          <div className={styles.p_curs}>Курсы по SMM</div>
-          <div className={styles.p_ned}>Длительность: 15 недель</div>
-          <div className={styles.p_text}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum
-            volutpat orci turpis urna. Et vestibulum, posuere tortor lacinia
-            sit. Sagittis porttitor orci auctor in at tincidunt arcu egestas.
-          </div>
-          <div className={styles.p_price}>Цена: 1400 руб</div>
-          <div className={styles.p_list}>
-            <button className={styles.listing}>дизайн</button>
-            <button className={styles.listing}>создание сайта</button>
-            <button className={styles.listing}>SMM</button>
-            <button className={styles.listing}>Онлайн</button>
-          </div>
-          <div className={styles.but_info}>
-            <button className={styles.p_info}>
-              <Link to="/course">Подробнее</Link>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <div className={styles.res}>hl,;</div>
+<div className={styles.inp_price_categ}>
+  <div className={styles.search_teg}>
+    <div className={styles.name_teg}>Поиск по тегам</div>
+    <hr className={styles.siz} />
+    <input
+      className={styles.inp_teg}
+      type="text"
+      placeholder="введите название.."
+    />
+  </div>
+  <div className={styles.price_teg}>
+    <div className={styles.price}>Цена</div>
+    <hr className={styles.siz} />
+    от
+    <input
+      className={styles.inp_price}
+      type="number"
+      step="0.01"
+      min="0"
+      placeholder="0,00"
+    />
+    до
+    <input
+      className={styles.inp_price}
+      type="number"
+      step="0.01"
+      min="0"
+      placeholder="0,00"
+    />
+  </div>
+</div>
+      {
+        courses.courses.map(course => {
+          console.log(course);
+        return (
+        <CourseCard
+          description={course.description}
+          name={course.name}
+          online={course.online}
+          price={course.price}
+        />
+        )
+      })
+      }
     </div>
   );
 }
