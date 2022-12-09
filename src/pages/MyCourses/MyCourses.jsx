@@ -2,8 +2,6 @@ import Course from "./Course";
 import bg from "../../image/bg-course.jpg";
 import styles from "./myCourses.module.scss";
 import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
-import { fetchCourses } from "../../features/courses/coursesSlice";
 
 const MyCourses = () => {
   const dispatch = useDispatch();
@@ -11,15 +9,11 @@ const MyCourses = () => {
   const user = useSelector((state) => state.users.user);
   const id = useSelector((state) => state.application.userId);
   const path = useSelector((state) => state.users.user.avatar);
-  const courses = useSelector((state) => state.courses.courses);
+  const myCourses = useSelector((state) =>
+    state.courses.courses.filter((course) => course.isOwner === id)
+  );
 
-  
-  useEffect(() => {
-      dispatch(fetchCourses);
-    }, [dispatch]);
-    
-    console.log(courses);
-
+  console.log(myCourses);
   return (
     <div className={styles.wrapper}>
       <div className={styles.sidebar}>
@@ -30,11 +24,16 @@ const MyCourses = () => {
           <img src={path} alt="" />
         </div>
         <div className={styles.name}>{user.nickname}</div>
-        <div className={styles.instagram}>
-          <a href={user.social}>
-            <img src="" alt="" />
-          </a>
-        </div>
+        {user.social && (
+          <div className={styles.instagram}>
+            <a href={user.social}>
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/3955/3955024.png"
+                alt=""
+              />
+            </a>
+          </div>
+        )}
         <div className={styles.description}>{user.description}</div>
       </div>
       <div className={styles.info}>
@@ -43,7 +42,15 @@ const MyCourses = () => {
           <button>Создать курс</button>
         </div>
         <div className={styles.courses}>
-          <Course />
+          {myCourses.map((course) => (
+            <Course
+              description={course.description}
+              name={course.name}
+              online={course.online}
+              price={course.price}
+              img={course.img}
+            />
+          ))}
         </div>
       </div>
     </div>
