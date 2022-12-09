@@ -39,6 +39,8 @@ function ProfilePage() {
     dispatch(fetchUser(id));
   }, [dispatch, id, photo]);
 
+  console.log(user);
+
   const handleExit = () => {
     localStorage.removeItem("token");
     window.location.reload();

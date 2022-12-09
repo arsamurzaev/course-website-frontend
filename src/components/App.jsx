@@ -8,7 +8,7 @@ import AuthPage from "../pages/AuthPage/AuthPage";
 import RegisterPage from "../pages/RegisterPage/RegisterPage";
 import { useSelector } from "react-redux";
 import SnowBack from "./Background/Snow";
-import PreloaderPage from "../preloader/PreloaderPage";
+import MyCourses from "../pages/MyCourses/MyCourses";
 
 const App = () => {
   const token = useSelector((state) => state.application.token);
@@ -35,6 +35,7 @@ const App = () => {
         <Route path="/courses" element={<CoursePage />} />
         <Route path="/course" element={<CurrentCoursePage />} />
         <Route path="/auth" element={<Navigate to="/" />} />
+        <Route path="/my-courses" element={<MyCourses/>}></Route>
       </Routes>
     </>
   );
