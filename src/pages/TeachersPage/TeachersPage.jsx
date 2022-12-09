@@ -1,8 +1,11 @@
 import React from 'react';
 import styles from './TeacherPage.module.css'
 import Teacher from './Teacher';
+import { useSelector } from 'react-redux';
 
 const TeachersPage = () => {
+    const users = useSelector(state => state.users)
+    console.log(users);
     return (
         <div className={styles.page}>
             <div className={styles.input_block}>
@@ -16,7 +19,7 @@ const TeachersPage = () => {
             <Teacher />
             
 
-
+s
         </div>
     );
 };

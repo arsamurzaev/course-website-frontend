@@ -9,13 +9,27 @@ function CoursePage({ description }) {
   const [priceOutput, setPriceOutput] = useState();
   const dispatch = useDispatch();
   const courses = useSelector((state) => state.courses);
-  const loading = useSelector((state) => state.courses.loading)
-  
+  const loading = useSelector((state) => state.courses.loading);
+  // const [search, setSearch] = useState(""); 
+
+  // const filterName = (searchText) => { 
+  //   if (!searchText) { 
+  //     return courses; 
+  //   } 
+  //   courses.filter((item) => { 
+  //     item.name.toLowerCase().includes() 
+  //   }) 
+  // }; 
+
+  useEffect(() => {
+    dispatch(fetchCourses());
+  }, [dispatch]);
+
   useEffect(() => {
     window.scroll(0, 0);
   });
 
-  if (loading) return <PreloaderPage/>
+  if (loading) return <PreloaderPage />;
 
   return (
     <div className={styles.course}>
@@ -34,11 +48,13 @@ function CoursePage({ description }) {
           <hr className={styles.siz} />
           от
           <input
+            // value={search} 
             className={styles.inp_price}
             type="number"
             step="0.01"
             min="0"
             placeholder="0,00"
+          // onChange={(e) => setSearch(e.target.value)} 
           />
           до
           <input
@@ -58,7 +74,7 @@ function CoursePage({ description }) {
             name={course.name}
             online={course.online}
             price={course.price}
-            tag={course.tags}
+            tags={course.tags}
           />
         );
       })}

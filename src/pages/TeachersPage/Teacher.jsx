@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './TeacherPage.module.css';
 import pfp from '../../images/kakKakat.jpg';
 const Teacher = () => {
+    
     return (
         <div className={styles.teacher_card}>
                 <img className={styles.pfp} src={pfp} alt="/" />
