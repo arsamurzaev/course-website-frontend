@@ -33,7 +33,7 @@ const RegisterPage = () => {
       <div className={styles.profile_card}>
         {/* <div className={styles.profile_name}>Регистрация</div> */}
         <div className={styles.waviy}>
-            <span style={{'-i': 1}}>Р</span>
+            <span style={{'--i': 1}}>Р</span>
             <span style={{'--i':2}}>е</span>
             <span style={{'--i':3}}>г</span>
             <span style={{'--i':4}}>и</span>

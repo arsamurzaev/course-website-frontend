@@ -15,15 +15,23 @@ function CoursePage({ description }) {
     dispatch(fetchCourses())
   }, [dispatch])
 
+
+  useEffect(() => {
+    window.scroll(0, 0)
+  })
   return (
     <div className={styles.course}> 
+
+{/* 
+  Ali commented
+
       <div className={styles.main_categ}>Выберите категорию курсов</div>
 
-<div className={styles.categories}>
+  <div className={styles.categories}>
   <button className={styles.circle}>IT</button>
   <button className={styles.circle}>Спорт</button>
   <button className={styles.circle}>Творчество</button>
-</div>
+</div> */}
 
 <div className={styles.inp_price_categ}>
   <div className={styles.search_teg}>
