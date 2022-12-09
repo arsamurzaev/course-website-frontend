@@ -1,49 +1,24 @@
-import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React from "react";
 import styles from "./Courses.module.scss";
-import { addPost } from "../../features/courses/coursesSlice";
 
 const CreatingCourses = () => {
-  const dispatch = useDispatch();
-
-  const [name, setName] = useState("");
-  const [price, setPrice] = useState("");
-  const [description, setDescription] = useState("");
-  const [location, setLocation] = useState("");
-  const [social, setSocial] = useState("");
-  const [category, setCategory] = useState("");
-  const [tags, setTags] = useState([]);
-  const [img, setImg] = useState("");
-
-  const user = useSelector((state) => state.users.user);
-
-  useEffect(() => {
-    dispatch(addPost({ img, courseData: {
-
-    } }));
-  });
-
   return (
-    <form className={styles.coursesBlock} encType="multipart/form-data">
+    <div className={styles.coursesBlock}>
       <div className={styles.course}>
-        <h1>{user.nickname}</h1>
+        <h1>Дмитрий Валак</h1>
 
         <div className={styles.nameCourse}>
           <div className={styles.nameInput}>
             <p>Название курса</p>
-            <input
-              type="text"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-            />
+            <input type="text" />
           </div>
           <div className={styles.categorisInput}>
             <p>Выберите категорию курсов</p>
-            <input
-              type="text"
-              value={category}
-              onChange={(e) => setCategory(e.target.value)}
-            ></input>
+            <select name="" id="">
+              <option value="it">It</option>
+              <option value="sport">Спорт</option>
+              <option value="creation">Творчество</option>
+            </select>
           </div>
         </div>
 
@@ -53,12 +28,20 @@ const CreatingCourses = () => {
         </div>
         <div className={styles.creatingImgPrice}>
           <div className={styles.price}>
+            <p>Онлайн</p>{" "}
+            <select name="" id="">
+              <option value="true">Да</option>
+              <option value="false">Нет</option>
+            </select>
+          </div>
+          <div className={styles.price}>
             <p>Цена</p>
             <input type="text" />
           </div>
           <div className={styles.img}>
             <p>Добавить изображения</p>
             <input type="file" multiple/>
+            
           </div>
         </div>
         <div className={styles.link}>
@@ -72,10 +55,11 @@ const CreatingCourses = () => {
           </div>
         </div>
         <div className={styles.button}>
-          <button>Отправить</button>
+        <button>Отправить</button>
         </div>
+        
       </div>
-    </form>
+    </div>
   );
 };
 
