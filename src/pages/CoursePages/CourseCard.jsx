@@ -2,13 +2,18 @@ import React from "react";
 import styles from "./CoursePage.module.css";
 import smmPh from "../../image/sms.png";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
-const CourseCard = ({ description, name, online, price, id }) => {
+const CourseCard = ({ description, name, online, price, id, image }) => {
+
   return (
     <div className={styles.course}>
       <div className={styles.card_smm_cours}>
         <div className={styles.card_img_smm}>
-          <img className={styles.img_smm} src={smmPh} alt="" />
+          <img className={styles.img_smm} src={image} style={{
+            height: '100%',
+            width: '100%'
+          }} alt="" />
         </div>
 
         <div className={styles.list_smm}>

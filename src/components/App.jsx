@@ -57,6 +57,7 @@ const App = () => {
         <Route path="/my-courses" element={<MyCourses />}></Route>
         <Route path="/teachers" element={<TeacherPage />} />
       </Routes>
+      
     </>
   );
 };

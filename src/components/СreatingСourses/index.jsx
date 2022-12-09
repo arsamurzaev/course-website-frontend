@@ -7,6 +7,10 @@ const CreatingCourses = () => {
   const user = useSelector((state) => state.users.user);
   const dispatch = useDispatch();
 
+  useEffect(() => {
+    
+  })
+
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
   const [description, setDescription] = useState("");
@@ -16,6 +20,8 @@ const CreatingCourses = () => {
   const [category, setCategory] = useState("");
   const [tags, setTags] = useState("");
   const [img, setImg] = useState([]);
+
+
 
   useEffect(() => {
     dispatch(
