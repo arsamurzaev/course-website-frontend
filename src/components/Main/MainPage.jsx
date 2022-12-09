@@ -54,11 +54,9 @@ const MainPage = () => {
             </div>
           </div>
 
-          <Link to="/">
-            <button className={styles.more}>
-              <Link to="/courses">Подробнее</Link>{" "}
-            </button>
-          </Link>
+          <button className={styles.more}>
+            <Link to="/courses">Подробнее</Link>{" "}
+          </button>
         </div>
 
         <div className={styles.blockFeedback}>

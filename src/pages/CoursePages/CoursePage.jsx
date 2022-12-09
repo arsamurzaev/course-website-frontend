@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./CoursePage.module.css";
 import smmPh from "../../image/sms.png";
 import { Link } from "react-router-dom";
 
 function CoursePage() {
+
+  useEffect(() => {
+    window.scroll(0, 0)
+  })
   return (
     <div className={styles.course}>
       <div className={styles.main_categ}>Выберите категорию курсов</div>

@@ -25,9 +25,8 @@ const AuthPage = () => {
   return (
     <form className={styles.main_card} onSubmit={handleSignIn}>
       <div className={styles.profile_card}>
-        {/* <div className={styles.profile_name}>Вход</div> */}
         <div className={styles.waviy}>
-            <span style={{'-i': 1}}>В</span>
+            <span style={{'--i': 1}}>В</span>
             <span style={{'--i':2}}>х</span>
             <span style={{'--i':3}}>о</span>
             <span style={{'--i':4}}>д</span>

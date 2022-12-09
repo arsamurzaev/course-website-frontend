@@ -9,24 +9,23 @@ import RegisterPage from "../pages/RegisterPage/RegisterPage";
 import { useSelector } from "react-redux";
 import SnowBack from "./Background/Snow";
 import PreloaderPage from "../preloader/PreloaderPage";
-import Footer from "./Footer";
 
 const App = () => {
   const token = useSelector((state) => state.application.token);
 
-  // if (!token) {
-  //   return (
-  //     <>
-  //       <SnowBack />
-  //       <Routes>
-  //         <Route path="/" element={<Navigate to="/auth" />} />
-  //         <Route path="/auth" element={<AuthPage />} />
-  //         <Route path="/register" element={<RegisterPage />} />
-  //         <Route path="/profile" element={<Navigate to="/auth" />} />
-  //       </Routes>
-  //     </>
-  //   );
-  // }
+  if (!token) {
+    return (
+      <>
+        <SnowBack />
+        <Routes>
+          <Route path="/" element={<Navigate to="/auth" />} />
+          <Route path="/auth" element={<AuthPage />} />
+          <Route path="/register" element={<RegisterPage />} />
+          <Route path="/profile" element={<Navigate to="/auth" />} />
+        </Routes>
+      </>
+    );
+  }
   return (
     <>
       <Header />
