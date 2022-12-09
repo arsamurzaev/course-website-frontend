@@ -1,0 +1,149 @@
+.coursesBlock {
+  max-width: 90%;
+  background: #202020;
+  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.35);
+  border-radius: 5px;
+  margin: auto;
+  margin-top: 30px;
+  padding-bottom: 100px;
+
+  .course {
+    width: 60%;
+    margin: auto;
+    padding-bottom: 50px;
+    padding-top: 10px;
+    color: white;
+
+    h1 {
+      font-size: 25px;
+      font-family: "Roboto";
+      font-weight: 600;
+    }
+
+    .nameCourse {
+      margin-top: 30px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      .nameInput {
+        input {
+          margin-top: 10px;
+          border: none;
+          color: black;
+          border-radius: 10px;
+          width: 230px;
+          height: 40px;
+          font-size: 20px;
+        }
+      }
+      .categorisInput {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        p {
+          margin-left: 10px;
+        }
+        select {
+          margin-top: 10px;
+          width: 170px;
+          height: 40px;
+          font-size: 20px;
+          border: none;
+          color: black;
+          border-radius: 10px;
+        }
+      }
+    }
+    .courseDescription {
+      margin-top: 24px;
+      textarea {
+        margin-top: 10px;
+        width: 100%;
+        height: 167px;
+        border-radius: 10px;
+        font-size: 20px;
+        padding-left: 10px;
+        padding-top: 10px;
+        
+      }
+    }
+    .creatingImgPrice {
+      color: white;
+      margin-top: 35px;
+      width: 80%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .price {
+        select{
+            width: 86px;
+          height: 40px;
+          border-radius: 10px;
+          border: none;
+          margin-top: 10px;
+          font-size: 20px;
+        }
+        input {
+          width: 86px;
+          height: 40px;
+          border-radius: 10px;
+          border: none;
+          margin-top: 10px;
+          font-size: 20px;
+        }
+      }
+      .img {
+        input {
+          font-size: 20px;
+          width: 247px;
+          height: 40px;
+          border: none;
+          border-radius: 10px;
+          margin-top: 10px;
+        }
+      }
+    }
+    .link{
+        width: 80%;
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .linkInputTwo{
+            input{
+                font-size: 20px;
+                width: 247px;
+                height: 40px;
+                border: none;
+                border-radius: 10px;
+                margin-top: 10px;
+            }
+           
+        }
+        .linkinputOne{
+            input{
+                width: 280px;
+                font-size: 20px;
+                height: 40px;
+                border: none;
+                border-radius: 10px;
+                margin-top: 10px;
+            }
+            
+        }
+    }
+    .button{
+        margin-top: 50px;
+        width: 100%;
+        text-align: end;
+        button{
+            padding: 15px 40px;
+            background-color: #3137C9;
+            color: white;
+            border-radius: 5px;
+        }
+        
+    }
+  }
+}
