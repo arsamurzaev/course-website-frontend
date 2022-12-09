@@ -17,5 +17,5 @@ const Teacher = ({nickname, description, avatar}) => {
             </div>
     );
 };
-
+// 
 export default Teacher;
