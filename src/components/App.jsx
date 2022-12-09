@@ -6,13 +6,22 @@ import CoursePage from "../pages/CoursePages/CoursePage";
 import CurrentCoursePage from "../pages/currentCoursePage/CurrentCoursePage";
 import AuthPage from "../pages/AuthPage/AuthPage";
 import RegisterPage from "../pages/RegisterPage/RegisterPage";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import SnowBack from "./Background/Snow";
 import MyCourses from "../pages/MyCourses/MyCourses";
+import TeacherPage from "../pages/TeachersPage/TeachersPage";
+import { useEffect } from "react";
+import { fetchUser } from "../features/users/usersSlice";
 
 const App = () => {
   const token = useSelector((state) => state.application.token);
+  const id = useSelector((state) => state.application.userId);
+  const dispatch = useDispatch();
 
+  useEffect(() => {
+    dispatch(fetchUser(id));
+    window.scroll(0, 0)
+  }, [dispatch]);
   if (!token) {
     return (
       <>
@@ -35,7 +44,9 @@ const App = () => {
         <Route path="/courses" element={<CoursePage />} />
         <Route path="/course" element={<CurrentCoursePage />} />
         <Route path="/auth" element={<Navigate to="/" />} />
-        <Route path="/my-courses" element={<MyCourses/>}></Route>
+        <Route path="/my-courses" element={<MyCourses />}></Route>
+        {/* Тут Лом-Али оставил роут: */}
+        <Route path="/teachers" element={<TeacherPage />} />
       </Routes>
     </>
   );
