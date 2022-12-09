@@ -62,6 +62,7 @@ function CoursePage({ description }) {
             name={course.name}
             online={course.online}
             price={course.price}
+            tag={course.tags}
           />
         );
       })}

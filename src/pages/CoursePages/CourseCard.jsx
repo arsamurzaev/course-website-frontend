@@ -4,7 +4,7 @@ import smmPh from "../../image/sms.png";
 import { Link } from "react-router-dom";
 
 
-const CourseCard = ({ description, name, online, price }) => {
+const CourseCard = ({ description, name, online, price, tags }) => {
   
 
 
@@ -33,9 +33,11 @@ const CourseCard = ({ description, name, online, price }) => {
           <div className={styles.bottom_info_block}>
             <div className={styles.p_price}>Цена: {price} руб</div>
             <div className={styles.p_list}>
-              <button className={styles.listing}>дизайн</button>
-              <button className={styles.listing}>создание сайта</button>
-              <button className={styles.listing}>SMM</button>
+              {
+                
+                tags.slice(0, 5).map((tag)=><button className={styles.listing}>{tag}</button>)
+              }
+              
               {/* онлайн чи нет */}
               <button className={styles.listing}>{online === true ? 'онлайн' : 'оффлайн'}</button>
             </div>
@@ -50,7 +52,6 @@ const CourseCard = ({ description, name, online, price }) => {
         </div>
       </div>
 
-      <div className={styles.res}>hl,;</div>
     </div>
   );
 };
