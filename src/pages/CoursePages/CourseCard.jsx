@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 
 
 const CourseCard = ({ description, name, online, price }) => {
-  
 
 
   return (
@@ -23,11 +22,7 @@ const CourseCard = ({ description, name, online, price }) => {
             
             <div className={styles.p_curs}>{name}</div>
             <div className={styles.p_ned}>Длительность: 15 недель</div>
-            <div className={styles.p_text}>
-              
-               {description.substr(0, 400) + '...'}
-              
-              </div>
+            <div className={styles.p_text}>{description}</div>
           </div>
 
           <div className={styles.bottom_info_block}>
