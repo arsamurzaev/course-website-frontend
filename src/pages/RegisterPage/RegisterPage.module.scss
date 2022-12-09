@@ -57,11 +57,11 @@ body {
     flex-direction: column;
     gap: 5px;
 }
-.but_card {
+.but_cards {
     margin: auto;
     padding: 10px;
     background-color: #3137C9;
-    width: 140px;
+    width: 200px;
     border-radius: 5px;
     cursor: pointer;
     margin-top: 50px;
@@ -69,8 +69,8 @@ body {
     transition: .5s;
     letter-spacing: 4px;
     border: 0px solid #8f7cec; 
-    }
-.but_card:hover {
+}
+.but_cards:hover {
     background: #8f7cec;
     color: #fff;
     border-radius: 5px;
@@ -81,4 +81,31 @@ body {
     margin-top: 50px;
     display: flex;
     gap: 14px;
+}
+.waviy {
+    margin-top: 25px;
+    font-size: 40px;
+    color: #fff;
+    position: relative;
+    -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
+}
+.waviy span {
+    position: relative;
+    display: inline-block;
+    font-size: 40px;
+    color: #fff;
+    animation: waviy 1.5s;
+    animation-delay: calc(.1s * var(--i))
+    
+}
+@keyframes waviy {
+    0%,40%,100% {
+    transform: translateY(0)
+    
+}
+
+    
+20% {
+    transform: translateY(-20px)
+}
 }

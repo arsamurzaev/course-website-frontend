@@ -5,6 +5,7 @@ const initialState = {
   signinUp: false,
   signinIn: false,
   token: localStorage.getItem("token"),
+  userId: localStorage.getItem("userId"),
 };
 
 export const authSignUp = createAsyncThunk(
@@ -46,7 +47,8 @@ export const authSignIn = createAsyncThunk(
         return thunkAPI.rejectWithValue(token.error);
       }
 
-      localStorage.setItem("token", token);
+      localStorage.setItem("token", token.token);
+      localStorage.setItem("userId", token.id)
 
       return thunkAPI.fulfillWithValue(token);
     } catch (error) {
@@ -85,7 +87,8 @@ const applicationSlice = createSlice({
       .addCase(authSignIn.fulfilled, (state, action) => {
         state.signinIn = false;
         state.error = null;
-        state.token = action.payload;
+        state.token = action.payload.token;
+        state.userId = action.payload.id
       });
   },
 });

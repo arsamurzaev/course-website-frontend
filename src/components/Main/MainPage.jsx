@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./MainPage.module.scss";
 import mainImage from "../../images/Bitmap.png";
 import Group from "../../images/Group.png";
@@ -8,8 +8,31 @@ import creativity from "../../images/icon-creativity.png";
 import avatar from "../../images/avatar.png";
 import { Link } from "react-router-dom";
 import Footer from "../Footer";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchCourses } from "../../features/courses/coursesSlice";
+import PreloaderPage from "../../preloader/PreloaderPage";
 
 const MainPage = () => {
+  const courses = useSelector((state) => state.courses.courses);
+  const dispatch = useDispatch();
+  const loading = useSelector((state) => state.courses.loading)
+
+  useEffect(() => {
+    dispatch(fetchCourses());
+  }, [dispatch]);
+
+  const itLength = courses.filter((item) => item.category === "it").length;
+
+  const sportLength = courses.filter(
+    (item) => item.category === "спорт"
+  ).length;
+
+  const creativityLength = courses.filter(
+    (item) => item.category === "творчество"
+  ).length;
+
+  if (loading) return <PreloaderPage/>
+
   return (
     <>
       <div className={styles.main}>
@@ -26,14 +49,16 @@ const MainPage = () => {
         </div>
 
         <div className={styles.numberCourses}>
-          <p className={styles.h1}>На нашей платформе более 302 курсов</p>
+          <p className={styles.h1}>
+            На нашей платформе более {courses.length} курсов
+          </p>
           <div className={styles.icons}>
             <div>
               <img src={it} alt="/" />
               <p>IT</p>
               <p>Развивайте в сфере айти</p>
               <p>
-                у нас более <br /> 120 курсов
+                у нас более <br /> {itLength} курсов
               </p>
             </div>
             <div>
@@ -41,7 +66,7 @@ const MainPage = () => {
               <p>Спорт</p>
               <p>Развивайте в сфере Спорта</p>
               <p>
-                у нас более <br /> 120 курсов
+                у нас более <br /> {sportLength} курсов
               </p>
             </div>
             <div>
@@ -49,16 +74,14 @@ const MainPage = () => {
               <p>Творчество</p>
               <p>Развивайте в сфере Творчества</p>
               <p>
-                у нас более <br /> 120 курсов
+                у нас более <br /> {creativityLength} курсов
               </p>
             </div>
           </div>
 
-          <Link to="/">
-            <button className={styles.more}>
-              <Link to="/courses">Подробнее</Link>{" "}
-            </button>
-          </Link>
+          <button className={styles.more}>
+            <Link to="/courses">Подробнее</Link>{" "}
+          </button>
         </div>
 
         <div className={styles.blockFeedback}>

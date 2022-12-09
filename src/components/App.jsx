@@ -1,27 +1,61 @@
 import Header from "./Header";
 import MainPage from "./Main/MainPage";
 import ProfilePage from "../pages/ProfilePages/ProfilePage";
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import CoursePage from "../pages/CoursePages/CoursePage";
 import CurrentCoursePage from "../pages/currentCoursePage/CurrentCoursePage";
 import AuthPage from "../pages/AuthPage/AuthPage";
 import RegisterPage from "../pages/RegisterPage/RegisterPage";
+
 import CreatingCourses from "./СreatingСourses";
 
 
+import { useDispatch, useSelector } from "react-redux";
+import SnowBack from "./Background/Snow";
+import MyCourses from "../pages/MyCourses/MyCourses";
+import TeacherPage from "../pages/TeachersPage/TeachersPage";
+import { useEffect } from "react";
+import { fetchUser } from "../features/users/usersSlice";
+
+
 const App = () => {
+  const token = useSelector((state) => state.application.token);
+  const id = useSelector((state) => state.application.userId);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchUser(id));
+    window.scroll(0, 0)
+  }, [dispatch]);
+  if (!token) {
+    return (
+      <>
+        <SnowBack />
+        <Routes>
+          <Route path="/" element={<Navigate to="/auth" />} />
+          <Route path="/auth" element={<AuthPage />} />
+          <Route path="/register" element={<RegisterPage />} />
+          <Route path="/profile" element={<Navigate to="/auth" />} />
+        </Routes>
+      </>
+    );
+  }
   return (
     <>
       {/* Header */}
+
       <Header />
       <Routes>
-        <Route path="/auth" element={<AuthPage />} />
-        <Route path="/register" element={<RegisterPage />} />
         <Route path="/" element={<MainPage />} />
         <Route path="/profile" element={<ProfilePage />} />
         <Route path="/courses" element={<CoursePage />} />
         <Route path="/course" element={<CurrentCoursePage />} />
+
         <Route path="/creatingCourses" element={<CreatingCourses/>} />
+        <Route path="/auth" element={<Navigate to="/" />} />
+        <Route path="/my-courses" element={<MyCourses />}></Route>
+        {/* Тут Лом-Али оставил роут: */}
+        <Route path="/teachers" element={<TeacherPage />} />
       </Routes>
     </>
   );
