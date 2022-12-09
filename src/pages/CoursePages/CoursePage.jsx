@@ -9,13 +9,13 @@ function CoursePage({ description }) {
   const [priceOutput, setPriceOutput] = useState();
   const dispatch = useDispatch();
   const courses = useSelector((state) => state.courses);
-  const loading = useSelector((state) => state.courses.loading)
-  
+  const loading = useSelector((state) => state.courses.loading);
+
   useEffect(() => {
     window.scroll(0, 0);
   });
 
-  if (loading) return <PreloaderPage/>
+  if (loading) return <PreloaderPage />;
 
   return (
     <div className={styles.course}>
@@ -51,9 +51,10 @@ function CoursePage({ description }) {
         </div>
       </div>
       {courses.courses.map((course) => {
-        console.log(course);
         return (
           <CourseCard
+            key={course._id}
+            id={course._id}
             description={course.description}
             name={course.name}
             online={course.online}

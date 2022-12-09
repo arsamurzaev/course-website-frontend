@@ -3,7 +3,7 @@ import styles from "./CoursePage.module.css";
 import smmPh from "../../image/sms.png";
 import { Link } from "react-router-dom";
 
-const CourseCard = ({ description, name, online, price }) => {
+const CourseCard = ({ description, name, online, price, id }) => {
   return (
     <div className={styles.course}>
       <div className={styles.card_smm_cours}>
@@ -31,7 +31,7 @@ const CourseCard = ({ description, name, online, price }) => {
             </div>
             <div className={styles.but_info}>
               <button className={styles.p_info}>
-                <Link to="/course">Подробнее</Link>
+                <Link to={"/course/" + id}>Подробнее</Link>
               </button>
             </div>
           </div>

@@ -1,11 +1,13 @@
 import React from "react";
 import UserCard from "../../components/userCard/UserCard";
 import styles from "./CurrentCourse.module.css";
-// images
 import ekelemene_pic from "../../images/ekalemene.png";
 import Comments from "../../components/CommentSection/Comments";
+import { useParams } from "react-router-dom";
 
 const CurrentCoursePage = () => {
+  const id = useParams()
+
   return (
     <div className={styles.page}>
       <UserCard />

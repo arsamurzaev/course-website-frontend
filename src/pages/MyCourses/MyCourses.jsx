@@ -13,7 +13,6 @@ const MyCourses = () => {
     state.courses.courses.filter((course) => course.isOwner === id)
   );
 
-  console.log(myCourses);
   return (
     <div className={styles.wrapper}>
       <div className={styles.sidebar}>

@@ -44,10 +44,9 @@ const App = () => {
         <Route path="/" element={<MainPage />} />
         <Route path="/profile" element={<ProfilePage />} />
         <Route path="/courses" element={<CoursePage />} />
-        <Route path="/course" element={<CurrentCoursePage />} />
+        <Route path="/course/:id" element={<CurrentCoursePage />} />
         <Route path="/auth" element={<Navigate to="/" />} />
         <Route path="/my-courses" element={<MyCourses />}></Route>
-        {/* Тут Лом-Али оставил роут: */}
         <Route path="/teachers" element={<TeacherPage />} />
       </Routes>
     </>
