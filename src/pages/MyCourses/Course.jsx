@@ -1,14 +1,43 @@
-const Course = () => {
+import { Link } from "react-router-dom";
+import styles from "../CoursePages/CoursePage.module.css";
+
+
+const Course = ({ description, name, online, price, img }) => {
     return ( 
-        <div className="card">
-            <div className="bgimg"></div>
-            <div className="card_info">
-                <div className="label"></div>
-                <div className="description"></div>
-                <div className="tags"></div>
-                <button></button>
+        <div className={styles.course}>
+        <div className={styles.card_smm_cours}>
+          <div className={styles.card_img_smm}>
+            <img className={styles.img_smm} src={img} alt="" />
+          </div>
+  
+          <div className={styles.list_smm}>
+            <div className={styles.top_info_block}>
+              <div className={styles.p_curs}>{name}</div>
+              <div className={styles.p_ned}>Длительность: 15 недель</div>
+              <div className={styles.p_text}>{description}</div>
             </div>
+  
+            <div className={styles.bottom_info_block}>
+              <div className={styles.p_price}>Цена: {price} руб</div>
+              <div className={styles.p_list}>
+                <button className={styles.listing}>дизайн</button>
+                <button className={styles.listing}>создание сайта</button>
+                <button className={styles.listing}>SMM</button>
+                {/* онлайн чи нет */}
+                <button className={styles.listing}>
+                  {online === true ? "онлайн" : "оффлайн"}
+                </button>
+              </div>
+              <div className={styles.but_info}>
+                <button className={styles.p_info}>
+                  <Link to="/course">Подробнее</Link>
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
+  
+      </div>
      );
 }
 
