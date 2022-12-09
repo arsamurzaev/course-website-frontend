@@ -36,8 +36,7 @@ function ProfilePage() {
     } else {
       setPreview(null);
     }
-    dispatch(fetchUser(id));
-  }, [dispatch, id, photo]);
+  }, [photo]);
 
   const handleExit = () => {
     localStorage.removeItem("token");
