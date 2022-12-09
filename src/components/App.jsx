@@ -6,12 +6,13 @@ import CoursePage from "../pages/CoursePages/CoursePage";
 import CurrentCoursePage from "../pages/currentCoursePage/CurrentCoursePage";
 import AuthPage from "../pages/AuthPage/AuthPage";
 import RegisterPage from "../pages/RegisterPage/RegisterPage";
+import CreatingCourses from "./СreatingСourses";
 
 
 const App = () => {
   return (
     <>
-    {/* Header */}
+      {/* Header */}
       <Header />
       <Routes>
         <Route path="/auth" element={<AuthPage />} />
@@ -20,6 +21,7 @@ const App = () => {
         <Route path="/profile" element={<ProfilePage />} />
         <Route path="/courses" element={<CoursePage />} />
         <Route path="/course" element={<CurrentCoursePage />} />
+        <Route path="/creatingCourses" element={<CreatingCourses/>} />
       </Routes>
     </>
   );
