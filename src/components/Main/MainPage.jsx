@@ -39,8 +39,10 @@ const MainPage = () => {
         <div className={styles.discripchen}>
           <img src={mainImage} alt="no" />
           <div className={styles.quote}>
-            Терпение и учение делают людей великими,
-            <br /> а великие люди — опора будущего.
+            Я знаю у тебя все прекрасно
+            <br /> у меня в душе все ясно 
+            <br /> спасибо тебе за все
+            <br /> открыто райское окно
           </div>
         </div>
 

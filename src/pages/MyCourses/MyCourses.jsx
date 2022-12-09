@@ -2,6 +2,7 @@ import Course from "./Course";
 import bg from "../../image/bg-course.jpg";
 import styles from "./myCourses.module.scss";
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 const MyCourses = () => {
   const dispatch = useDispatch();
@@ -38,7 +39,9 @@ const MyCourses = () => {
       <div className={styles.info}>
         <div className={styles.over}>
           <div className={styles.title}>Мои курсы</div>
-          <button>Создать курс</button>
+          <button>
+            <Link to="/creatingCourses">Создать курс</Link>
+          </button>
         </div>
         <div className={styles.courses}>
           {myCourses.map((course) => (
