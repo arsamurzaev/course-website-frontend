@@ -68,9 +68,7 @@ function ProfilePage() {
     setPassword("");
   };
 
-  {
-    if (loader) return <PreloaderPage />;
-  }
+
   return (
     <>
       <SnowBack />

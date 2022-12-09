@@ -22,6 +22,15 @@ function CoursePage({ description }) {
 
   return (
     <div className={styles.course}>
+
+      {/* <div className={styles.main_categ}>Выберите категорию курсов</div>
+
+      <div className={styles.categories}>
+        <button className={styles.circle}>IT</button>
+        <button className={styles.circle}>Спорт</button>
+        <button className={styles.circle}>Творчество</button>
+      </div> */}
+
       <div className={styles.inp_price_categ}>
         <div className={styles.search_teg}>
           <div className={styles.name_teg}>Поиск по тегам</div>
@@ -32,6 +41,18 @@ function CoursePage({ description }) {
             placeholder="введите название.."
           />
         </div>
+
+
+      <div>Курсы
+      <div className={styles.li}>Выбрать курс
+        <div className={styles.dropdown}>
+          <a className={styles.drop_link} href='*'>IT</a>
+          <a className={styles.drop_link} href='*'>Спорт</a>
+          <a className={styles.drop_link} href='*'>Творчество</a>
+        </div>
+        </div>
+      </div>
+      
         <div className={styles.price_teg}>
           <div className={styles.price}>Цена</div>
           <hr className={styles.siz} />

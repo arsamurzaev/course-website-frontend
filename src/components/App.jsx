@@ -55,6 +55,7 @@ const App = () => {
         {/* Тут Лом-Али оставил роут: */}
         <Route path="/teachers" element={<TeacherPage />} />
       </Routes>
+      
     </>
   );
 };
