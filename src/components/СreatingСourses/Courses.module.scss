@@ -1,22 +1,14 @@
 .coursesBlock {
   max-width: 90%;
-  background: #202020;
+  background: #000000;
+  padding: 50px 20px;
+  border-radius: 100px !important;
   box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.35);
   border-radius: 5px;
   margin: auto;
   margin-top: 30px;
-  padding: 50px;
   padding-bottom: 100px;
 
-  input {
-    color: #202020 !important;
-    padding: 10px;
-    border-radius: 10px;
-  }
-
-  textarea {
-    color: #202020 !important;
-  }
   .course {
     width: 60%;
     margin: auto;
@@ -39,7 +31,8 @@
         input {
           margin-top: 10px;
           border: none;
-          color: black;
+          color: black !important;
+          padding: 10px;
           border-radius: 10px;
           width: 230px;
           height: 40px;
@@ -60,7 +53,7 @@
           height: 40px;
           font-size: 20px;
           border: none;
-          color: black;
+          color: black !important;
           border-radius: 10px;
         }
       }
@@ -73,6 +66,7 @@
         height: 167px;
         border-radius: 10px;
         font-size: 20px;
+        color: #000000 !important;
         padding-left: 10px;
         padding-top: 10px;
       }
@@ -100,6 +94,8 @@
           border: none;
           margin-top: 10px;
           font-size: 20px;
+          color: #000000 !important;
+          padding: 10px;
         }
       }
       .img {
@@ -127,6 +123,8 @@
           border: none;
           border-radius: 10px;
           margin-top: 10px;
+          color: #000000 !important;
+          padding: 10px;
         }
       }
       .linkinputOne {
@@ -137,6 +135,8 @@
           border: none;
           border-radius: 10px;
           margin-top: 10px;
+          color: #000000 !important;
+          padding: 10px;
         }
       }
     }

@@ -50,7 +50,7 @@ const MyCourses = () => {
               name={course.name}
               online={course.online}
               price={course.price}
-              img={course.img}
+              img={course.image}
             />
           ))}
         </div>

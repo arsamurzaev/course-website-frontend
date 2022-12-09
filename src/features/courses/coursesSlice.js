@@ -25,13 +25,19 @@ export const addPost = createAsyncThunk(
   async (reqData, thunkAPI) => {
     try {
       const formData = new FormData();
-      formData.append("myFiles", reqData.img);
+      formData.append("myFiles", reqData.img[0]);
+      formData.append("myFiles", reqData.img[1]);
+      formData.append("myFiles", reqData.img[2]);
+      formData.append("myFiles", reqData.img[3]);
+      formData.append("myFiles", reqData.img[4]);
       const res = await fetch("/upload-multiple", {
         method: "POST",
         body: formData,
       });
 
       const data = await res.json();
+
+      console.log(data);
 
       const {
         name,
@@ -41,7 +47,6 @@ export const addPost = createAsyncThunk(
         social,
         online,
         category,
-        tags,
         userId,
       } = reqData.courseData;
       const response = await fetch("/course", {
@@ -56,7 +61,6 @@ export const addPost = createAsyncThunk(
           online,
           category,
           image: data,
-          tags,
         }),
         headers: {
           "content-type": "application/json",
@@ -87,6 +91,20 @@ const coursesSlice = createSlice({
         state.loading = false;
       })
       .addCase(fetchCourses.rejected, (state, action) => {
+        state.error = action.payload;
+        state.loading = false;
+      })
+
+      .addCase(addPost.pending, (state, action) => {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(addPost.fulfilled, (state, action) => {
+        state.courses = action.payload;
+        state.loading = false;
+        console.log(state.courses);
+      })
+      .addCase(addPost.rejected, (state, action) => {
         state.error = action.payload;
         state.loading = false;
       });

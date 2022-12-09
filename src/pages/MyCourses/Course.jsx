@@ -3,11 +3,15 @@ import styles from "../CoursePages/CoursePage.module.css";
 
 
 const Course = ({ description, name, online, price, img }) => {
+
     return ( 
         <div className={styles.course}>
         <div className={styles.card_smm_cours}>
           <div className={styles.card_img_smm}>
-            <img className={styles.img_smm} src={img} alt="" />
+            <img className={styles.img_smm} style={{
+              width: '100%',
+              height: '100%'
+            }} src={img[0]} alt="" />
           </div>
   
           <div className={styles.list_smm}>
