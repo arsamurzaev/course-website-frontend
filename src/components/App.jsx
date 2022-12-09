@@ -37,6 +37,7 @@ const App = () => {
         <Route path="/course" element={<CurrentCoursePage />} />
         <Route path="/auth" element={<Navigate to="/" />} />
       </Routes>
+      
     </>
   );
 };
