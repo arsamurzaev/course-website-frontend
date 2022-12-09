@@ -1,6 +1,8 @@
 .main {
   max-width: 100%;
 
+  background: #141414;
+  padding-bottom: 200px;
   padding-bottom:200px;
 
   .discripchen {
@@ -117,7 +119,7 @@
     margin: auto;
     margin-top: 75px;
     width: 70%;
-    
+
     .h1 {
       font-size: 30px;
       color: white;
@@ -134,9 +136,9 @@
       justify-content: center;
       flex-direction: column;
 
-      button{
+      button {
         width: 150px;
-        background: #3137C9;
+        background: #3137c9;
         box-shadow: 0px 4px 15px -7px rgba(48, 55, 201, 0.3);
         border-radius: 5px;
         border: none;
@@ -146,15 +148,13 @@
         cursor: pointer;
         margin-left: 170px;
       }
-
-     
     }
     .questionsInput {
-       width: 80%;
+      width: 80%;
       margin-top: 30px;
       text-align: center;
       margin: auto;
-     
+
       input {
         width: 80%;
         font-size: 16px;
@@ -162,15 +162,11 @@
         margin-bottom: 30px;
         border: none;
         padding: 10px 0;
-        border-bottom: 2px solid #3F3F3F;
+        border-bottom: 2px solid #3f3f3f;
         outline: none;
         background: transparent;
         margin-top: 40px;
-
-       
       }
-
-     
     }
   }
 }

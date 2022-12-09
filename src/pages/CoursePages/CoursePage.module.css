@@ -3,7 +3,7 @@
 } */
 .course {
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 700px;
 }
 .main_categ {
     text-align: center;
@@ -40,6 +40,8 @@
     justify-content: space-evenly;
     margin-top: 50px;
     color: #FFFFFF;
+    /* upd by Ali */
+    margin-top: 100px;
 }
 .siz {
     border-bottom: #ffffff;
@@ -84,6 +86,7 @@
     height: 100%;
 }
 .list_smm {
+    width: 50%;
     padding: 45px;
     color: #FFFFFF;
     background-color: #202020;
@@ -94,11 +97,12 @@
 .p_list {
     display: flex;
     gap: 15px;
+    margin: 15px 0 15px 0;
     flex-wrap: wrap;
 }
 .p_curs {
     font-weight: 500;
-    font-size: 24px;
+    font-size: 40px;
 }
 .p_ned {
     font-size: 11px;
@@ -110,18 +114,18 @@
     color: #D2D2D2;
 }
 .p_price {
-    margin-top: 50px;
     font-weight: 300;
     font-size: 16px;
     color: #FFFFFF;
 }
 .listing {
-    margin-top: 15px;
     border-radius: 5px;
     color: #FFFFFF;
     font-size: 13px;
     background-color: #EA8C1E;
     cursor: pointer;
+    padding: 2px;
+    
 }
 .but {
     display: flex;
@@ -131,12 +135,14 @@
     align-items: flex-end;
     margin-top: 10px;
     background-color: #3137C9;
-    color: #D9D9D9;
     border: #202020;
     padding: 5px;
     width: 130px;
     border-radius: 3px;
     cursor: pointer;
+}
+.p_info a {
+    color: white;
 }
 .but_info {
     display: flex;
@@ -240,4 +246,12 @@
 }
 .drop_link:not(:first-child){
     border-top:3px solid #181818;
+}
+.top_info_block {
+    height: 70%;
+}
+
+.bottom_info_block {
+    position: relative;
+    top: 8%;
 }
