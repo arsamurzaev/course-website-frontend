@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchCourses } from "../../features/courses/coursesSlice";
 import PreloaderPage from "../../preloader/PreloaderPage";
@@ -6,20 +6,9 @@ import CourseCard from "./CourseCard";
 import styles from "./CoursePage.module.css";
 
 function CoursePage({ description }) {
-  const [priceOutput, setPriceOutput] = useState();
   const dispatch = useDispatch();
   const courses = useSelector((state) => state.courses);
   const loading = useSelector((state) => state.courses.loading);
-  // const [search, setSearch] = useState(""); 
-
-  // const filterName = (searchText) => { 
-  //   if (!searchText) { 
-  //     return courses; 
-  //   } 
-  //   courses.filter((item) => { 
-  //     item.name.toLowerCase().includes() 
-  //   }) 
-  // }; 
 
   useEffect(() => {
     dispatch(fetchCourses());
@@ -67,7 +56,6 @@ function CoursePage({ description }) {
         </div>
       </div>
       {courses.courses.map((course) => {
-        console.log(course);
         return (
           <CourseCard
             description={course.description}
