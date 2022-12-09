@@ -10,7 +10,6 @@ function CoursePage({ description }) {
   const courses = useSelector((state) => state.courses.courses);
   const loading = useSelector((state) => state.courses.loading);
   const [search, setSearch] = useState("");
- 
 
   console.log(courses);
 
@@ -42,7 +41,6 @@ function CoursePage({ description }) {
             value={search}
           />
         </div>
-       
       </div>
       {filterName.map((course) => {
         console.log(course);

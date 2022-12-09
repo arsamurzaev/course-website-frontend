@@ -9,12 +9,14 @@ import RegisterPage from "../pages/RegisterPage/RegisterPage";
 
 import CreatingCourses from "./СreatingСourses";
 
+
 import { useDispatch, useSelector } from "react-redux";
 import SnowBack from "./Background/Snow";
 import MyCourses from "../pages/MyCourses/MyCourses";
 import TeacherPage from "../pages/TeachersPage/TeachersPage";
 import { useEffect } from "react";
 import { fetchUser } from "../features/users/usersSlice";
+import { fetchCourses } from "../features/courses/coursesSlice";
 
 
 const App = () => {
@@ -24,6 +26,7 @@ const App = () => {
 
   useEffect(() => {
     dispatch(fetchUser(id));
+    dispatch(fetchCourses())
     window.scroll(0, 0)
   }, [dispatch]);
   if (!token) {
