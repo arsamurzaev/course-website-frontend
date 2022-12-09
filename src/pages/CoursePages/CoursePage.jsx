@@ -10,13 +10,13 @@ function CoursePage() {
   })
   return (
     <div className={styles.course}>
-      <div className={styles.main_categ}>Выберите категорию курсов</div>
+      {/* <div className={styles.main_categ}>Выберите категорию курсов</div>
 
       <div className={styles.categories}>
         <button className={styles.circle}>IT</button>
         <button className={styles.circle}>Спорт</button>
         <button className={styles.circle}>Творчество</button>
-      </div>
+      </div> */}
 
       <div className={styles.inp_price_categ}>
         <div className={styles.search_teg}>
@@ -29,15 +29,15 @@ function CoursePage() {
           />
         </div>
 
-        <li className={styles.li}>Выбрать курс
+      <div>Курсы
+      <div className={styles.li}>Выбрать курс
         <div className={styles.dropdown}>
-          <a className={styles.drop_link} href='*'>Link1</a>
-          <a className={styles.drop_link} href='*'>Link2</a>
-          <a className={styles.drop_link} href='*'>Link3</a>
-          <a className={styles.drop_link} href='*'>Link4</a>
-          <a className={styles.drop_link} href='*'>Link5</a>
+          <a className={styles.drop_link} href='*'>IT</a>
+          <a className={styles.drop_link} href='*'>Спорт</a>
+          <a className={styles.drop_link} href='*'>Творчество</a>
         </div>
-        </li>
+        </div>
+      </div>
 
         <div className={styles.price_teg}>
           <div className={styles.price}>Цена</div>
