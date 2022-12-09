@@ -12,10 +12,6 @@ function CoursePage({ description }) {
   const loading = useSelector((state) => state.courses.loading)
   
   useEffect(() => {
-    dispatch(fetchCourses());
-  }, [dispatch]);
-  
-  useEffect(() => {
     window.scroll(0, 0);
   });
 

@@ -51,7 +51,6 @@ const CourseCard = ({ description, name, online, price, tags }) => {
 
         </div>
       </div>
-
     </div>
   );
 };
