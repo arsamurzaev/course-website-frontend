@@ -40,6 +40,7 @@ const App = () => {
   }
   return (
     <>
+
       {/* Header */}
 
       <Header />
@@ -50,10 +51,12 @@ const App = () => {
         <Route path="/course" element={<CurrentCoursePage />} />
 
         <Route path="/creatingCourses" element={<CreatingCourses/>} />
+
         <Route path="/auth" element={<Navigate to="/" />} />
         <Route path="/my-courses" element={<MyCourses />}></Route>
         {/* Тут Лом-Али оставил роут: */}
         <Route path="/teachers" element={<TeacherPage />} />
+
       </Routes>
       
     </>

@@ -7,8 +7,15 @@ import styles from "./CoursePage.module.css";
 
 function CoursePage({ description }) {
   const dispatch = useDispatch();
-  const courses = useSelector((state) => state.courses);
+  const courses = useSelector((state) => state.courses.courses);
   const loading = useSelector((state) => state.courses.loading);
+  const [search, setSearch] = useState("");
+
+  console.log(courses);
+
+  let filterName = courses.filter((item) => {
+    return item.name.toLowerCase().includes(search.toLowerCase());
+  });
 
   useEffect(() => {
     dispatch(fetchCourses());
@@ -33,16 +40,21 @@ function CoursePage({ description }) {
 
       <div className={styles.inp_price_categ}>
         <div className={styles.search_teg}>
-          <div className={styles.name_teg}>Поиск по тегам</div>
+          <div className={styles.name_teg}>Поиск по названию курса</div>
           <hr className={styles.siz} />
           <input
             className={styles.inp_teg}
             type="text"
             placeholder="введите название.."
+            onChange={(e) => setSearch(e.target.value)}
+            value={search}
           />
         </div>
-
-
+      </div>
+      {filterName.map((course) => {
+        console.log(course);
+          />
+        </div>
       <div>Курсы
       <div className={styles.li}>Выбрать курс
         <div className={styles.dropdown}>

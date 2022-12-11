@@ -18,11 +18,7 @@
     font-size: 21px;
 
   }
-  /* .categories {
-=======
-}
 /* .categories {
->>>>>>> main
     display: flex;
     justify-content: space-evenly;
   }
@@ -40,13 +36,6 @@
     border-radius: 50%;
     -webkit-transition: -webkit-transform .8s ease-in-out;
     transition: transform .8s ease-in-out;
-<<<<<<< HEAD
-  
-  } */
-  /* .circle:hover {
-=======
-
-} */ 
 .circle:hover {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
@@ -66,8 +55,9 @@
 .siz {
 
     border-bottom: #ffffff;
-  }
+}
   .inp_teg {
+
     font-size: 15px;
     width: 300px;
     padding: 10px;
