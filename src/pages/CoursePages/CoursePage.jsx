@@ -40,37 +40,6 @@ function CoursePage({ description }) {
           />
         </div>
 
-
-      <div>Курсы
-      <div className={styles.li}>Выбрать курс
-        <div className={styles.dropdown}>
-          <a className={styles.drop_link} href='*'>IT</a>
-          <a className={styles.drop_link} href='*'>Спорт</a>
-          <a className={styles.drop_link} href='*'>Творчество</a>
-        </div>
-        </div>
-      </div>
-      
-        <div className={styles.price_teg}>
-          <div className={styles.price}>Цена</div>
-          <hr className={styles.siz} />
-          от
-          <input
-            className={styles.inp_price}
-            type="number"
-            step="0.01"
-            min="0"
-            placeholder="0,00"
-          />
-          до
-          <input
-            className={styles.inp_price}
-            type="number"
-            step="0.01"
-            min="0"
-            placeholder="0,00"
-          />
-        </div>
       </div>
       {courses.courses.map((course) => {
         return (
