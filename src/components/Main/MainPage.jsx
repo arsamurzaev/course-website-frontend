@@ -88,21 +88,64 @@ const MainPage = () => {
           <p>Отзывы наших преподователей </p>
           <div className={styles.feedback}>
             <img src={avatar} alt="/" />
+            <div className={styles.name_userss}>Асхьаб Бурсакъов</div>
+            <div className={styles.time_userss}>оставил 3 дня назад</div>
+            <div className={styles.com_users}>Харцоно цӏе тесна хийла хьо ягарх,
+Нохчийчоь ца йоьжна, гӏаьттина яха.
+Кавказан ткъес хилла, маршонан ага,
+Хьан лаьттан сий дина яхь йолчу наха.</div>
           </div>
           <div className={styles.feedback}>
             <img src={avatar} alt="/" />
+            <div className={styles.name_userss}>Альви Таксист</div>
+            <div className={styles.time_userss}>оставил 3 дня назад</div>
+            <div className={styles.com_users}>Какая ночь! Я не могу.
+Не спится мне. Такая лунность.
+Еще как будто берегу
+В душе утраченную юность.
+
+Подруга охладевших лет,
+Не называй игру любовью,.</div>
           </div>
           <div className={styles.feedback}>
             <img src={avatar} alt="/" />
+            <div className={styles.name_userss}>Элиза Кимчи</div>
+            <div className={styles.time_userss}>оставил 3 дня назад</div>
+            <div className={styles.com_users}>У лукоморья дуб зелёный;
+Златая цепь на дубе том:
+И днём и ночью кот учёный
+Всё ходит по цепи кругом;
+Идёт направо — песнь заводит,
+Налево — сказку говорит.
+Там чудеса: там леший бродит,.</div>
           </div>
           <div className={styles.feedback}>
             <img src={avatar} alt="/" />
+            <div className={styles.name_userss}>Гит Изновр</div>
+            <div className={styles.time_userss}>оставил 3 дня назад</div>
+            <div className={styles.com_users}>Белая берёза
+Под моим окном
+Принакрылась снегом,
+Точно серебром.
+
+На пушистых ветках
+Снежною каймой
+Распустились кисти
+Белой бахромой..</div>
           </div>
           <div className={styles.feedback}>
             <img src={avatar} alt="/" />
+            <div className={styles.name_userss}>Милана Менеджер</div>
+            <div className={styles.time_userss}>оставил 3 дня назад</div>
+            <div className={styles.com_users}>Снегирь сидит на ветке В розовой жилетке, А дятел в ярко-красной Шапочке атласной. Вдали мелькают сойки — Синие ковбойки.</div>
           </div>
           <div className={styles.feedback}>
             <img src={avatar} alt="/" />
+            <div className={styles.name_userss}>Ридван Нохчо</div>
+            <div className={styles.time_userss}>оставил 3 дня назад</div>
+            <div className={styles.com_users}>Ма Лепа Дашо Малх
+            къонахи боцу чу джекшана 
+            Еууу Олш Шен кхолш.</div>
           </div>
         </div>
 
