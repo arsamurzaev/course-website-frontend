@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 export const fetchUser = createAsyncThunk(
-  "user/fetch",
+  "users/fetch",
   async (id, thunkAPI) => {
     try {
       const res = await fetch("/users/" + id);
@@ -14,19 +14,6 @@ export const fetchUser = createAsyncThunk(
     }
   }
 );
-
-export const fetchUsers = createAsyncThunk(
-  "users/fetch",
-  async (_, thunkAPI) => {
-    try {
-      const response = await fetch('/users');
-      const users = await response.json()
-      return thunkAPI.fulfillWithValue(users)
-    } catch (error) {
-      return thunkAPI.rejectWithValue(error.toString())
-    }
-  }
-)
 
 export const editUser = createAsyncThunk(
   "users/edit",
@@ -66,7 +53,7 @@ export const editUser = createAsyncThunk(
 );
 
 const initialState = {
-  user: [],
+  user: {},
   error: null,
   loader: false,
 };
@@ -89,9 +76,7 @@ const usersSlice = createSlice({
         state.error = action.payload;
         state.loader = false;
       })
-      .addCase(fetchUsers.fulfilled, (state, action) => {
-        state.user = action.payload
-      })
+
       .addCase(editUser.pending, (state, action) => {
         state.loader = true;
         state.error = null;

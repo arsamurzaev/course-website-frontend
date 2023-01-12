@@ -33,8 +33,6 @@ const Comments = () => {
         </div>
       </div>
 
-      <div>
-  {/* 
       <div className={styles.comment}>
         <div className={styles.comment_user_info_block}>
           <img className={styles.img} src={anonimous_pfp} alt="" />
@@ -97,7 +95,6 @@ const Comments = () => {
           laborum maxime, sint libero quasi obcaecati blanditiis iste ipsum?
           Ipsum?
         </div>
-      </div> */}
       </div>
     </div>
   );

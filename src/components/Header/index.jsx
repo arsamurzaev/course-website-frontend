@@ -21,7 +21,7 @@ const Header = () => {
         <Link to="/courses">
           <button>курсы</button>
         </Link>
-        <Link to="/teachers">
+        <Link to="#">
           <button>преподаватели</button>
         </Link>
         {user.role === "teacher" && (
