@@ -6,22 +6,26 @@ import CoursePage from "../pages/CoursePages/CoursePage";
 import CurrentCoursePage from "../pages/currentCoursePage/CurrentCoursePage";
 import AuthPage from "../pages/AuthPage/AuthPage";
 import RegisterPage from "../pages/RegisterPage/RegisterPage";
+
 import CreatingCourses from "./СreatingСourses";
+
+
 import { useDispatch, useSelector } from "react-redux";
 import SnowBack from "./Background/Snow";
 import MyCourses from "../pages/MyCourses/MyCourses";
 import TeacherPage from "../pages/TeachersPage/TeachersPage";
 import { useEffect } from "react";
-import { fetchUsers } from "../features/users/usersSlice";
+import { fetchUser } from "../features/users/usersSlice";
 import { fetchCourses } from "../features/courses/coursesSlice";
 
 
 const App = () => {
   const token = useSelector((state) => state.application.token);
+  const id = useSelector((state) => state.application.userId);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchUsers());
+    dispatch(fetchUser(id));
     dispatch(fetchCourses())
     window.scroll(0, 0)
   }, [dispatch]);
@@ -40,7 +44,6 @@ const App = () => {
   }
   return (
     <>
-
       {/* Header */}
 
       <Header />
@@ -51,14 +54,11 @@ const App = () => {
         <Route path="/course" element={<CurrentCoursePage />} />
 
         <Route path="/creatingCourses" element={<CreatingCourses/>} />
-
         <Route path="/auth" element={<Navigate to="/" />} />
         <Route path="/my-courses" element={<MyCourses />}></Route>
         {/* Тут Лом-Али оставил роут: */}
         <Route path="/teachers" element={<TeacherPage />} />
-
       </Routes>
-      
     </>
   );
 };

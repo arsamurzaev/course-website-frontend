@@ -1,9 +1,11 @@
 import Course from "./Course";
 import bg from "../../image/bg-course.jpg";
 import styles from "./myCourses.module.scss";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 const MyCourses = () => {
+  const dispatch = useDispatch();
+
   const user = useSelector((state) => state.users.user);
   const id = useSelector((state) => state.application.userId);
   const path = useSelector((state) => state.users.user.avatar);
@@ -11,6 +13,7 @@ const MyCourses = () => {
     state.courses.courses.filter((course) => course.isOwner === id)
   );
 
+  console.log(myCourses);
   return (
     <div className={styles.wrapper}>
       <div className={styles.sidebar}>
